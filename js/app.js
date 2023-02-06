@@ -20,10 +20,13 @@ arrowRight[0].addEventListener( "click",
     function myFunction() {
         let firstSlide = slideEl[activeSlide]
         firstSlide.classList.remove('active')
-        activeSlide += 1
+        if (activeSlide === 4) {
+                activeSlide = 0
+            } else {
+                activeSlide += 1
+            }
         let secondSlide = slideEl[activeSlide]
         secondSlide.classList.add('active')
-        
     }
     
 )   
@@ -31,9 +34,14 @@ arrowRight[0].addEventListener( "click",
 arrowLeft[0].addEventListener( "click",
 
     function myFunction() {
+
     let secondSlide = slideEl[activeSlide]
     secondSlide.classList.remove('active')
-    activeSlide -= 1
+    if (activeSlide === 0) {
+        activeSlide = 4
+    } else {
+        activeSlide += 1
+    }
     let firstSlide = slideEl[activeSlide]
     firstSlide.classList.add('active')
         
