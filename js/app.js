@@ -40,7 +40,7 @@ arrowLeft[0].addEventListener( "click",
     if (activeSlide === 0) {
         activeSlide = 4
     } else {
-        activeSlide += 1
+        activeSlide -= 1
     }
     let firstSlide = slideEl[activeSlide]
     firstSlide.classList.add('active')
