@@ -12,15 +12,31 @@ let activeSlide = 0
 const slideEl = document.getElementsByClassName('slide')
 console.log(slideEl)
 
-let arrowLeft = document.getElementsByClassName('.carosello__arrow.arrow-left')
-let arrowRight = document.getElementsByClassName('.carosello__arrow.arrow-right');
+let arrowLeft = document.getElementsByClassName('carousel-arrow arrow-left')
+let arrowRight = document.getElementsByClassName('carousel-arrow arrow-right');
 
-arrowRight.addEventListener ( "click",
+arrowRight[0].addEventListener( "click",
+    
+    function myFunction() {
+        let firstSlide = slideEl[activeSlide]
+        firstSlide.classList.remove('active')
+        activeSlide += 1
+        let secondSlide = slideEl[activeSlide]
+        secondSlide.classList.add('active')
+        
+    }
+    
+)   
+
+arrowLeft[0].addEventListener( "click",
 
     function myFunction() {
-        let firstSlide = slideEl[0]
-        firstSlide.classList.remove('active')
-        let secondSlide = slideEl[1]
-        secondSlide.classList.add('active')
+    let secondSlide = slideEl[activeSlide]
+    secondSlide.classList.remove('active')
+    activeSlide -= 1
+    let firstSlide = slideEl[activeSlide]
+    firstSlide.classList.add('active')
+        
     }
-)   
+    
+) 
