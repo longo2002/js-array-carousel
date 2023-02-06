@@ -13,6 +13,10 @@
     display: block;
 }
 
+.carousel {
+	position: relative;
+}
+
 .carousel .carousel-arrow {
 	position: absolute;
 	font-size: 40px;

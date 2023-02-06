@@ -1,7 +1,5 @@
 console.log("works!")
 
-let arrowLeft = document.getElementsByClassName('.carosello__arrow.arrow-left')
-let arrowRight = document.getElementsByClassName('.carosello__arrow.arrow-right');
 let slides = [
 	'./img/01.jpg',
 	'./img/02.jpg',
@@ -10,20 +8,19 @@ let slides = [
 	'./img/05.jpg',
 ]
 
-let indiceSlideAttiva = 0
-const slideElements = document.getElementsByClassName('slide')
-console.log(slideElements)
+let activeSlide = 0
+const slideEl = document.getElementsByClassName('slide')
+console.log(slideEl)
 
+let arrowLeft = document.getElementsByClassName('.carosello__arrow.arrow-left')
+let arrowRight = document.getElementsByClassName('.carosello__arrow.arrow-right');
 
-arrowLeft.addEventListener ( "click",
+arrowRight.addEventListener ( "click",
 
-    // function myFunction() {
-
-    //     let firstSlide = slideElements[0]
-    //     firstSlide.classList.remove('active')
-
-    //     let secondSlide = slideElements[1]
-    //     secondSlide.classList.add('active')
-
-    // }
+    function myFunction() {
+        let firstSlide = slideElements[0]
+        firstSlide.classList.remove('active')
+        let secondSlide = slideElements[1]
+        secondSlide.classList.add('active')
+    }
 )   
