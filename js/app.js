@@ -18,9 +18,9 @@ let arrowRight = document.getElementsByClassName('.carosello__arrow.arrow-right'
 arrowRight.addEventListener ( "click",
 
     function myFunction() {
-        let firstSlide = slideElements[0]
+        let firstSlide = slideEl[0]
         firstSlide.classList.remove('active')
-        let secondSlide = slideElements[1]
+        let secondSlide = slideEl[1]
         secondSlide.classList.add('active')
     }
 )   
